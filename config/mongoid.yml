@@ -1,0 +1,11 @@
+development:
+  host: localhost
+  database: boilerplate_development
+
+test:
+  host: localhost
+  database: boilerplate_test
+
+# set these environment variables on your prod server
+production:
+  uri: <%= ENV['MONGOHQ_URL'] %>
