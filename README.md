@@ -13,4 +13,15 @@ To start a project directly from this boilerplate and init a new git repository,
     git add .
     git commit -m 'first commit'
 
+# Details
+This is a Rails 3.2 project generated with `rails g boilerplate`. I've made the following modifications:
+
+* `bundle exec compass install rails`
+* `rails g mongoid:config`
+* `rails g rspec:install`
+* Added thin/Procfile for Heroku server
+* Set mongoid production environment to use MongoHQ
+* Added some sane default styles
+* HomeController with a test index
+
 MIT License.
