@@ -14,11 +14,11 @@ group :production do
 end
 
 group :development, :test do
-  # Test environment - RSpec/Spork/Guard/FactoryGirl
+  # Test environment - RSpec/Spork/Guard/Fabrication
   gem 'rspec-rails'
-  gem 'factory_girl_rails'
+  gem 'fabrication'
   gem 'guard-rspec'
-  gem 'spork', '> 0.9.0.rc'
+  gem 'spork', '~> 0.9.0'
   gem 'guard-spork'
 end
 

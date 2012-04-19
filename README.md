@@ -7,7 +7,11 @@ You are welcome to use this as a starting point and fork with your preferred set
 To start a project directly from this boilerplate and init a new git repository, run the following:
 
     git clone git@github.com:samgro/rails-boilerplate.git <YOUR APP NAME>
-    ruby script/rename_app.rb <YourAppName>
+    
+Replace all references to `Boilerplate` and `boilerplate` with your app name using your favorite global find/replace.
+
+    rm Gemfile.lock
+    bundle install
     rm -rf .git
     git init
     git add .
@@ -23,5 +27,6 @@ This is a Rails 3.2 project generated with `rails g boilerplate`. I've made the 
 * Set mongoid production environment to use MongoHQ
 * Added some sane default styles
 * HomeController with a test index
+* Added Guardfile/spec_helper for using Guard/Spork
 
 MIT License.
