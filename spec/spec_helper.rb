@@ -38,9 +38,6 @@ Spork.prefork do
 end
 
 Spork.each_run do
-  # This code will be run each time you run your specs.
-  FactoryGirl.reload
-  
   RSpec.configure do |config|
     config.before(:each) do
       # Drop Mongo tables
