@@ -5,6 +5,7 @@ gem 'mongoid', '~> 3.0'
 
 gem 'jquery-rails'
 gem 'json'
+gem 'omniauth-facebook'
 
 group :production do
   gem 'thin' # Web server for Heroku

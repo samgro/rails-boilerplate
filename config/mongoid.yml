@@ -1,8 +1,8 @@
 development:
-  sessions:
-    default:
-      database: boilerplate_dev
-      hosts:
+  sessions:
+    default:
+      database: boilerplate_dev
+      hosts:
         - localhost:27017
 
 test:
@@ -12,7 +12,7 @@ test:
       hosts:
         - localhost:27017
 
-# set these environment variables on your prod server
+# heroku config:set MONGOHQ_URL=mongodb://heroku@<YOUR_URL>
 <% if ENV['MONGOHQ_URL'] %>
   <% uri = URI.parse(ENV['MONGOHQ_URL']) %>
 production:

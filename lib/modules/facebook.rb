@@ -1,0 +1,4 @@
+module Facebook
+  APP_ID = ENV['FACEBOOK_ID']
+  APP_SECRET = ENV['FACEBOOK_SECRET']
+end
