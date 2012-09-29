@@ -1,10 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.3'
-
-# Mongoid
-gem 'mongoid', '~> 2.3'
-gem 'bson_ext', '~> 1.5'
+gem 'rails', '3.2.8'
+gem 'mongoid', '~> 3.0'
 
 gem 'jquery-rails'
 gem 'json'
@@ -20,6 +17,10 @@ group :development, :test do
   gem 'guard-rspec'
   gem 'spork', '~> 0.9.0'
   gem 'guard-spork'
+end
+
+group :development do
+  gem 'debugger'
 end
 
 # Gems used only for assets and not required

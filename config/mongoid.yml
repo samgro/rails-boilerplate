@@ -1,11 +1,28 @@
 development:
-  host: localhost
-  database: boilerplate_development
+  sessions:
+    default:
+      database: boilerplate_dev
+      hosts:
+        - localhost:27017
 
 test:
-  host: localhost
-  database: boilerplate_test
+  sessions:
+    default:
+      database: boilerplate_dev
+      hosts:
+        - localhost:27017
 
 # set these environment variables on your prod server
+<% if ENV['MONGOHQ_URL'] %>
+  <% uri = URI.parse(ENV['MONGOHQ_URL']) %>
 production:
-  uri: <%= ENV['MONGOHQ_URL'] %>
+  <<: *defaults
+  sessions:
+    default:
+      <<: *default_session
+      database: <%= uri.path.sub('/','') %>
+      username: <%= uri.user %>
+      password: <%= uri.password %>
+      hosts:
+        - <%= uri.host %>:<%= uri.port %>
+<% end %>
