@@ -1,2 +1,5 @@
 <h1>Hello, boilerplate!</h1>
-<p>This is a test page. <%= link_to 'Login with Facebook', '/auth/facebook' %></p>
+<p>This is a test page.</p>
+<% unless logged_in? %>
+  <p><%= link_to 'Login with Facebook', '/auth/facebook' %></p>
+<% end %>
